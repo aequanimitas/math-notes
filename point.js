@@ -14,7 +14,8 @@ var b = new Point();
 b.x = 10, b.y = 16;
 
 function slope(startpoint, endpoint) {
-  return  ((endpoint.x - startpoint.x) / (endpoint.y - startpoint.y) < 0) ? "Slope is negative" : "Slope is positive";
+  this.value = (endpoint.x - startpoint.x) / (endpoint.y - startpoint.y);
+  return value < 0 ? {"message": "Slope is Negative", "value": value} : {"message": "Slope is Positive", "value": value} ;
 }
 
 console.log(slope(a,b));
