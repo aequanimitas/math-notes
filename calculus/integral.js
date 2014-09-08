@@ -5,5 +5,9 @@
 })(ring_strategy, 0, 0.5, 0.1);
 
 function ring_strategy(r) {
-  return ((2 * Math.PI * r) * r) / 2;
+  return (circular(r) * r) / 2;
+}
+
+function circular(r) {
+  return 2 * Math.PI * r;
 }
